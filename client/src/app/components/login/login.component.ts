@@ -26,6 +26,10 @@ export class LoginComponent {
 
   constructor(private UsersService: UsersService, private router:Router) { }
 
+  navigateToHome() {
+    this.router.navigate(["/home"])
+}
+
   Login() {
     if (this.formUser.valid) {
       const credentials = {
@@ -40,7 +44,9 @@ export class LoginComponent {
           localStorage.setItem('role', response.roles);
           this.alertMessage = '¡Bienvenido, ' + credentials.userName + '!';
           this.AlertMessage = true;
-          this.router.navigate(['/home']);
+          setTimeout(() => {
+            this.navigateToHome();
+        }, 2000);
         },
         (error) => {
           if(error.status === 400){
