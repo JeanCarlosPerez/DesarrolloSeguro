@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel src --out-dir build",
+    "build": "npm build",
     "dev": "nodemon src/index.js --exec babel-node",
     "start": "node build/index.js"
   },
