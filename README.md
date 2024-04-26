@@ -26,10 +26,10 @@ git clone https://github.com/JeanCarlosPerez/DesarrolloSeguro.git
 #### Instala las dependencias:
 
 ```bash
-cd scouzpro/client
+cd DesarrolloSeguro/client
 npm install
 
-cd scouzpro/backend
+cd DesarrolloSeguro/backend
 npm install
 ```
 
