@@ -7,7 +7,7 @@
 ![Register](client/src/assets/img/register.png)
 ![Blogs](client/src/assets/img/blogs.png)
 ![Create](client/src/assets/img/create.png)
-![Users](client/src/assets/img/user.png)
+![Users](client/src/assets/img/users.png)
 ![EditUser](client/src/assets/img/edit-users.png)
 
 
