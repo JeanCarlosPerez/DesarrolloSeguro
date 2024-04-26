@@ -5,8 +5,9 @@ import { Router } from "@angular/router";
 
 export const blockLock = () => {
     const router = inject(Router);
-    
-    if (localStorage.getItem('token')) {
+
+    // Verificar si localStorage está definido
+    if (typeof localStorage !== 'undefined' && localStorage.getItem('token')) {
         return true;
     } else {
         router.navigate(['/']);
