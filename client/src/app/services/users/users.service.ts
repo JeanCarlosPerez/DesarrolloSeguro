@@ -19,7 +19,7 @@ export class UsersService {
       password: newUser.password
     };
 
-    return this.http.post('http://localhost:3000/auth/signup', userData);
+    return this.http.post('https://desarrolloseguro.onrender.com/', userData);
   }
 
   loginUser(credentials: any): Observable<any> {
@@ -28,23 +28,23 @@ export class UsersService {
       password: credentials.password,
     };
 
-    return this.http.post('http://localhost:3000/auth/signin', loginData);
+    return this.http.post('https://desarrolloseguro.onrender.com/auth/signin', loginData);
   }
 
   getAllUsers(): Observable<any> {
-    return this.http.get('http://localhost:3000/user');
+    return this.http.get('https://desarrolloseguro.onrender.com/user');
   }
 
   getUserById(userId: string): Observable<any> {
-    return this.http.get(`http://localhost:3000/user/${userId}`);
+    return this.http.get(`https://desarrolloseguro.onrender.com/user/${userId}`);
   }
 
   updateUser(userId: string, updatedUser: any): Observable<any> {
-    return this.http.put(`http://localhost:3000/user/${userId}`, updatedUser);
+    return this.http.put(`https://desarrolloseguro.onrender.com/user/${userId}`, updatedUser);
   }
 
   deleteUser(userId: string): Observable<any> {
-    return this.http.delete(`http://localhost:3000/user/${userId}`);
+    return this.http.delete(`https://desarrolloseguro.onrender.com/user/${userId}`);
   }
 
 }
