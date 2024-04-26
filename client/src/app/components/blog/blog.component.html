@@ -1,0 +1,45 @@
+<div class="text-center">
+  <h1 class="text-4xl font-bold">Mis Blogs</h1>
+</div>
+
+<div *ngIf="blogs.length > 0" class="flex flex-wrap justify-center mt-10  mb-10">
+  <!-- Itera sobre cada blog -->
+  <div *ngFor="let blog of blogs" class="m-4">
+    <div class="card w-80 glass shadow-xl h-[18em]">
+      <div class="card-body flex flex-col items-center"> <!-- Agrega la clase flex y flex-col para alinear verticalmente, y items-center para centrar horizontalmente -->
+        <!-- Nuevo div para centrar el título y el contenido -->
+        <div class="text-center">
+          <h3 class="card-title mb-6 h-10">{{ blog.title }}</h3>
+          <p class="h-16">{{ blog.content }}</p>
+        </div>
+        <!-- Agrega los botones de borrado y edición dentro de cada tarjeta -->
+        <div class="flex justify-between mt-8 gap-4">
+          <button *ngIf="checkRole()" class="btn btn-outline" (click)="deleteBlog(blog._id)">Borrar</button>
+          <button *ngIf="checkRole()" class="btn btn-outline" (click)="openEditModal(blog)">Editar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- Modal para la edición del blog -->
+<div *ngIf="editingBlog" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-3">
+  <!-- Modal -->
+  <div class="glass p-8 w-96 rounded-lg shadow-lg">
+    <!-- Contenido del modal -->
+    <h2 class="text-xl font-bold mb-4 text-center">Editar Blog</h2>
+    <label class="block mb-2">Título:</label>
+    <input [(ngModel)]="editingBlog.title" name="title" class="input input-bordered input-primary w-full max-w-xs">
+    <label class="block mb-2">Contenido:</label>
+    <textarea [(ngModel)]="editingBlog.content" name="content" class="textarea textarea-primary  w-full max-w-xs"></textarea>
+    <!-- Botones -->
+    <div class="flex justify-center gap-6 mt-6">
+      <button (click)="closeModal()" class="btn btn-primary">Cerrar</button>
+      <button (click)="saveChanges()" class="btn btn-primary">Guardar Cambios</button>
+    </div>
+  </div>
+</div>

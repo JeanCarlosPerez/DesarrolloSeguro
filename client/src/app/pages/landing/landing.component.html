@@ -1,0 +1,23 @@
+<div class="hero min-h-screen flex flex-col justify-center items-center">
+    <div>
+        <img src="../../../assets/img/fondo.jpg" alt="fondo landing page" class="absolute top-0 left-0 w-full h-full object-cover z-0">
+    </div>
+    <div class="hero-content text-center text-neutral-content relative z-20">
+      <div class="max-w-md mx-auto px-4">
+        <h1
+          class="mb-5 text-4xl lg:text-5xl xl:text-6xl font-bold text-black animate-bounce animate-thrice animate-ease-linear animate-alternate-reverse animate-fill-forwards">
+          ¡Tarea a Tarea!
+        </h1>
+        <p class="mb-8 lg:mb-12 text-black text-lg lg:text-xl">
+            ¡Bienvenido a Tarea a Tarea! La aplicación imprescindible para bloggers y amantes de la escritura. Con Tarea a Tarea, llevar un seguimiento de tus tareas y proyectos de escritura nunca ha sido más fácil. 
+        </p>
+        <div class="flex justify-center gap-6">
+            <button [routerLink]="['/login']" class="btn btn-neutral w-24">Acceso</button>
+            <button [routerLink]="['/register']" class="btn btn-neutral w-24">Registrate</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <app-footer/>
+  </div>

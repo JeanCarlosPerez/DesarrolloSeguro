@@ -1,0 +1,23 @@
+<!-- boton-crear-blog.component.html -->
+
+<div class="flex justify-end mr-10 mt-16">
+  <button *ngIf="checkRole()" (click)="showModal()" class="btn btn-primary">+ Crear Blog</button>
+</div>
+
+
+<dialog id="mimodal" class="modal">
+  <form #miFormulario="ngForm" (ngSubmit)="CreateBlog(miFormulario)" class="glass p-8 w-96 rounded-lg shadow-lg">
+    <h2 class="text-xl font-bold mb-4 text-center">Crear Blog</h2>
+    <label for="title" class="block mb-2">Título:</label>
+    <input type="text" id="title" name="title" ngModel required class="input input-bordered input-primary w-full max-w-xs">
+    <label for="content" class="block mb-2">Contenido:</label>
+    <textarea id="content" name="content" ngModel required class="textarea textarea-primary  w-full max-w-xs"></textarea>
+    <!-- Botones -->
+    <div class="flex justify-center mt-6">
+      <button (click)="closeModal()" class="btn btn-primary mr-4">Cerrar</button>
+      <button type="submit" class="btn btn-primary">Crear</button>
+    </div>
+  </form>
+</dialog>
+
+
