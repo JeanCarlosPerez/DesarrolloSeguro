@@ -79,6 +79,14 @@ Nuestra aplicación utiliza el siguiente stack tecnológico:
 **Server:** ![NPM](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white) ![Node](https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white) ![Express](https://img.shields.io/badge/Express%20js-000000?style=for-the-badge&logo=express&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white) ![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=JSON%20web%20tokens&logoColor=white)
 
 **Testing:** ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white) 
+
+## Auditoria
+
+Se ha efectuado una [Auditoria](https://docs.google.com/document/d/1nA4S3bkIx0t4VXCIonNyXR-4tleDJeM4zChYLw6kudo/edit?usp=sharing) de Ciberseguridad para la web. En ella se ha analizado, tanto la estructura de los archivos, asi como las vulnerabilidades y la seguridad que tiene la web en desarrollo.
+
+Se aporta informe con resultados de vulnerabilidades del programa  [OWASP ZAP](hhttps://drive.google.com/file/d/1RW20oRvlPIvp2wa897wkhJH7ub0THS_d/view?usp=sharing)
+
+
 ## Desarrolladores :trophy:
 
 - :man_technologist: [@JeanCarlosPerez](https://github.com/JeanCarlosPerez) 
